@@ -9,7 +9,7 @@
 		"name": "ZainChen"
 	},
 	"icon": "assets/json-128.png",
-	"homepage": "https://github.com/ZainChen/vscode-json/blob/dev/README.md",
+	"homepage": "https://github.com/ZainChen/vscode-json/blob/master/README.md",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ZainChen/vscode-json"
