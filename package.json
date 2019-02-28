@@ -20,9 +20,12 @@
 	"keywords": [
 		"zain",
 		"ZainChen",
+		"银",
+		"志银",
+		"陈志银",
+		"陈志振",
 		"json",
 		"omi",
-		"志银",
 		"html",
 		"css",
 		"javascript",
@@ -151,8 +154,8 @@
 			"properties": {
 				"JSON-zain.author.ZainChen": {
 					"type": "string",
-					"default": "Welcome to omi.",
-					"description": "Omi for Visual Studio Code"
+					"default": "Welcome to vscode-json.",
+					"description": "Json for Visual Studio Code"
 				},
 				"JSON-zain.json.parsing": {
 					"type": "boolean",
