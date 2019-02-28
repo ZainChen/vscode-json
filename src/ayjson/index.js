@@ -67,7 +67,7 @@ class JsonOutlineProvider {
         }
         else {
             //vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', false);  //非json文件不去除视图，只清楚菜单内容
-            //vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', true);  //非json文件不去除视图，只清楚菜单内容
+            vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', true);  //非json文件不去除视图，只清楚菜单内容
             this.clearMenu();
         }
     }

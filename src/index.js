@@ -13,7 +13,11 @@ const ayjson = require("./ayjson/index");  //json文件解析功能模块(test)
 function activate(context) {
 	//json文件解析功能
 	const jsonOutlineProvider = new ayjson.JsonOutlineProvider(context);
-    vscode.window.registerTreeDataProvider('jsonOutline', jsonOutlineProvider);
+    //vscode.window.registerTreeDataProvider('jsonOutline', jsonOutlineProvider);
+    vscode.window.createTreeView('jsonOutline', {
+        treeDataProvider: jsonOutlineProvider,
+        showCollapseAll: true
+    });
     vscode.commands.registerCommand('jsonOutline.refresh', () => jsonOutlineProvider.refresh());
     vscode.commands.registerCommand('jsonOutline.refreshNode', offset => jsonOutlineProvider.refresh(offset));
     vscode.commands.registerCommand('jsonOutline.renameNode', offset => jsonOutlineProvider.rename(offset));

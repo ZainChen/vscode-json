@@ -3,7 +3,7 @@
 	"displayName": "json",
 	"description": "Json for Visual Studio Code",
 	"license": "Json",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "ZainChen",
 	"author": {
 		"name": "ZainChen"
@@ -24,8 +24,8 @@
 		"志银",
 		"陈志银",
 		"陈志振",
-		"json",
 		"omi",
+		"json",
 		"html",
 		"css",
 		"javascript",
@@ -123,8 +123,7 @@
 			"json-views": [
 				{
 					"id": "jsonOutline",
-					"name": "Please open the json file.(ZainChen)",
-					"when": "jsonOutlineEnabled"
+					"name": "Please open the json file.(ZainChen)"
 				}
 			]
 		},

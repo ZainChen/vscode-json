@@ -1,11 +1,14 @@
 # Json for Visual Studio Code
-## Version *
+
+## Version 1.0.1 February 28, 2019
 
 ### New Features
-- ...
+
+- Add menu node one-click folding function.
 
 ### Bug Fixes
-- ...
+
+- Solve the problem that vscode-json can't display.
 
 ---
 
