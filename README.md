@@ -17,7 +17,10 @@ GitHub: https://github.com/ZainChen/vscode-json
 - Json analysis
 - In development...
 
-<p><img src="" alt="Json"/></p>
+<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function4.png" alt="Json"/></p>
+<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function3.png" alt="Json"/></p>
+<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function2.png" alt="Json"/></p>
+<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function1.png" alt="Json"/></p>
 
 # Extension Developer
 
