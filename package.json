@@ -3,7 +3,7 @@
 	"displayName": "json",
 	"description": "Json for Visual Studio Code",
 	"license": "Json",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"publisher": "ZainChen",
 	"author": {
 		"name": "ZainChen"
