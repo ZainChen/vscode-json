@@ -9,7 +9,7 @@ This extension adds json support for Visual Studio Code.
 
 GitHub: https://github.com/ZainChen/vscode-json
 
-<p align="right">vscode-json <strong>v1.0.2</strong></p>
+<p align="right">vscode-json <strong>v1.0.3</strong></p>
 <p align="center"><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/json-z.png" alt="omi" width="300"/></p>
 <h2 align="center">Author: ZainChen</h2>
 

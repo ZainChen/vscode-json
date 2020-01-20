@@ -1,5 +1,17 @@
 # Json for Visual Studio Code
 
+## Version 1.0.3 January 20, 2020
+
+### New Features
+
+- /
+
+### Bug Fixes
+
+- Fix sidebar icons.
+
+---
+
 ## Version 1.0.1 February 28, 2019
 
 ### New Features

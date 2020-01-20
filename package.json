@@ -3,7 +3,7 @@
 	"displayName": "json",
 	"description": "Json for Visual Studio Code",
 	"license": "Json",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publisher": "ZainChen",
 	"author": {
 		"name": "ZainChen"
@@ -114,7 +114,7 @@
 				{
 					"id": "json-views",
 					"title": "json",
-					"icon": "./assets/json-54-40-28.png"
+					"icon": "./assets/json-z-500.png"
 				}
 			]
 		},
