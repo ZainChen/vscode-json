@@ -1,6 +1,6 @@
 # Json for Visual Studio Code
 
-## Version 1.0.3 January 20, 2020
+## Version 1.0.4 January 20, 2020
 
 ### New Features
 

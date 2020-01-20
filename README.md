@@ -1,7 +1,7 @@
 # Json for Visual Studio Code
-[![VisualStudioMarketplace](https://img.shields.io/badge/VisualStudioMarketplace-v1.0.2-orange.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
-[![Downloads](https://img.shields.io/badge/Downloads-12k%2B-brightgreen.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
-[![UpdateTime](https://img.shields.io/badge/UpdateTime-2019%2F02%2F28%2020%3A36%3A36-blue.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
+[![VisualStudioMarketplace](https://img.shields.io/badge/VisualStudioMarketplace-v1.0.3-orange.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
+[![Downloads](https://img.shields.io/badge/Downloads-98k%2B-brightgreen.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
+[![UpdateTime](https://img.shields.io/badge/UpdateTime-2020%2F01%2F20%2012%3A28%3A30-blue.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
 
 This extension adds json support for Visual Studio Code.
 
