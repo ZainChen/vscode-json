@@ -58,13 +58,15 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 			if (vscode.window.activeTextEditor.document.uri.scheme === 'file') {
 				const enabled = vscode.window.activeTextEditor.document.languageId === 'json' || vscode.window.activeTextEditor.document.languageId === 'jsonc';
 				vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', enabled);
-				if (enabled) {
-					this.refresh();
-				}
+				// if (enabled) {
+				// 	this.refresh();
+				// }
 			}
 		} else {
 			vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', false);
 		}
+		// 切换文件，刷新
+		this.refresh();
 	}
 
 	private onDocumentChanged(changeEvent: vscode.TextDocumentChangeEvent): void {
@@ -131,6 +133,8 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 
 	select(range: vscode.Range) {
 		this.editor.selection = new vscode.Selection(range.start, range.end);
+		// 编辑窗跳转到指定范围
+        this.editor.revealRange(range, vscode.TextEditorRevealType.InCenter);
 	}
 
 	private getIcon(node: json.Node): any {
