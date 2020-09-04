@@ -14,7 +14,7 @@
 	},
 	"license": "MIT",
 	"author": "ZainChen <2384439266@qq.com>",
-	"icon": "assets/json-128.png",
+	"icon": "resources/json-128.png",
 	"categories": [
 		"Extension Packs",
 		"Other"
