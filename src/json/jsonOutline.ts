@@ -103,11 +103,13 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 
 	private getChildrenOffsets(node: json.Node): number[] {
 		const offsets: number[] = [];
-		for (const child of node.children) {
-			const childPath = json.getLocation(this.text, child.offset).path;
-			const childNode = json.findNodeAtLocation(this.tree, childPath);
-			if (childNode) {
-				offsets.push(childNode.offset);
+		if (node && node.children) {
+			for (const child of node.children) {
+				const childPath = json.getLocation(this.text, child.offset).path;
+				const childNode = json.findNodeAtLocation(this.tree, childPath);
+				if (childNode) {
+					offsets.push(childNode.offset);
+				}
 			}
 		}
 		return offsets;
@@ -164,10 +166,10 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 		if (node.parent.type === 'array') {
 			const prefix = node.parent.children.indexOf(node).toString();
 			if (node.type === 'object') {
-				return prefix + ': { '+ node.children.length +' }';
+				return prefix + ': { '+ this.getNodeChildrenCount(node) +' }';
 			}
 			if (node.type === 'array') {
-				return prefix + ': [ '+ node.children.length +' ]';
+				return prefix + ': [ '+ this.getNodeChildrenCount(node) +' ]';
 			}
 			return prefix + ':' + node.value.toString();
 		}
@@ -175,14 +177,22 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 			const property = node.parent.children[0].value.toString();
 			if (node.type === 'array' || node.type === 'object') {
 				if (node.type === 'object') {
-					return '{ '+ node.children.length +' } ' + property;
+					return '{ '+ this.getNodeChildrenCount(node) +' } ' + property;
 				}
 				if (node.type === 'array') {
-					return '[ '+ node.children.length +' ] ' + property;
+					return '[ '+ this.getNodeChildrenCount(node) +' ] ' + property;
 				}
 			}
 			const value = this.editor.document.getText(new vscode.Range(this.editor.document.positionAt(node.offset), this.editor.document.positionAt(node.offset + node.length)));
 			return `${property}: ${value}`;
 		}
+	}
+
+	private getNodeChildrenCount(node: json.Node): string {
+		let count = '';
+		if (node && node.children) {
+			count = node.children.length + '';
+		}
+		return count;
 	}
 }
