@@ -164,10 +164,10 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 		if (node.parent.type === 'array') {
 			const prefix = node.parent.children.indexOf(node).toString();
 			if (node.type === 'object') {
-				return prefix + ':{ }';
+				return prefix + ': { '+ node.children.length +' }';
 			}
 			if (node.type === 'array') {
-				return prefix + ':[ ]';
+				return prefix + ': [ '+ node.children.length +' ]';
 			}
 			return prefix + ':' + node.value.toString();
 		}
@@ -175,10 +175,10 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 			const property = node.parent.children[0].value.toString();
 			if (node.type === 'array' || node.type === 'object') {
 				if (node.type === 'object') {
-					return '{ } ' + property;
+					return '{ '+ node.children.length +' } ' + property;
 				}
 				if (node.type === 'array') {
-					return '[ ] ' + property;
+					return '[ '+ node.children.length +' ] ' + property;
 				}
 			}
 			const value = this.editor.document.getText(new vscode.Range(this.editor.document.positionAt(node.offset), this.editor.document.positionAt(node.offset + node.length)));
