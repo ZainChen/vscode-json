@@ -1,71 +1,51 @@
-# Json for Visual Studio Code
-[![VisualStudioMarketplace](https://img.shields.io/badge/VisualStudioMarketplace-v1.0.3-orange.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
-[![Downloads](https://img.shields.io/badge/Downloads-98k%2B-brightgreen.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
-[![UpdateTime](https://img.shields.io/badge/UpdateTime-2020%2F01%2F20%2012%3A28%3A30-blue.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.omi-develop)
+# Views & View Containers
 
-This extension adds json support for Visual Studio Code.
+This sample demonstrates how to implement and contribute a tree view in VS Code. This includes:
 
-# About
+- Contributing views and view containers.
+- Contributing actions in various location of the view.
+- Implementing the tree data provider for the view.
+- Creating and working with the view.
 
-GitHub: https://github.com/ZainChen/vscode-json
+This sample provides following views
 
-<p align="right">vscode-json <strong>v1.0.3</strong></p>
-<p align="center"><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/json-z.png" alt="omi" width="300"/></p>
-<h2 align="center">Author: ZainChen</h2>
+- Node dependencies view
+- Ftp file explorer view
 
-# Function
-- Json analysis
-- In development...
+Following example shows Node dependencies view in Package Explorer View container.
 
-<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function4.png" alt="Json"/></p>
-<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function3.png" alt="Json"/></p>
-<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function2.png" alt="Json"/></p>
-<p><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/function1.png" alt="Json"/></p>
+![Package Explorer](./resources/package-explorer.png)
 
-# Extension Developer
+## VS Code API
 
-<table>
-    <tbody>
-        <tr>
-            <td>
-                <a target="_blank" href="https://zainzy.com">
-                    <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
-                </a>
-            </td>
-            <td>
-                <a target="_blank" href="https://github.com/ZainChen/vscode-json">
-                    <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
-                </a>
-            </td>
-            <td>
-                <a target="_blank" href="https://zainzy.com">
-                    <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a target="_blank" href="https://zainzy.com">
-                    <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
-                </a>
-            </td>
-            <td>
-                <a target="_blank" href="https://zainzy.com">
-                    <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
-                </a>
-            </td>
-            <td>
-                <a target="_blank" href="https://zainzy.com">
-                    <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <a target="_blank" href="https://zainzy.com">
-                    <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
-                </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+This sample uses following contribution points, activation events and APIs
+
+### Contribution Points
+
+- `views`
+- `viewsContainers`
+- `menu`
+  - `view/title`
+  - `view/item/context`
+
+### Activation Events
+
+- `onView:${viewId}`
+
+### APIs
+
+- `window.createTreeView`
+- `window.registerTreeDataProvider`
+- `TreeView`
+- `TreeDataProvider`
+
+Refer to [Usage](./USAGE.md) document for more details.
+
+## Running the Sample
+
+- Open this example in VS Code Insiders
+- `npm install`
+- `npm run watch`
+- `F5` to start debugging
+- Node dependencies view is shown in Package explorer view container in Activity bar.
+- FTP file explorer view should be shown in Explorer

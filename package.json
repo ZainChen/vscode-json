@@ -2,21 +2,23 @@
 	"name": "json",
 	"displayName": "json",
 	"description": "Json for Visual Studio Code",
-	"license": "Json",
-	"version": "1.0.4",
+	"version": "2.0.0",
 	"publisher": "ZainChen",
-	"author": {
-		"name": "ZainChen"
-	},
-	"icon": "assets/json-128.png",
-	"homepage": "https://github.com/ZainChen/vscode-json/blob/master/README.md",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ZainChen/vscode-json"
-	},
+	"homepage": "https://github.com/ZainChen/vscode-json#readme",
 	"bugs": {
 		"url": "https://github.com/ZainChen/vscode-json/issues"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ZainChen/vscode-json.git"
+	},
+	"license": "MIT",
+	"author": "ZainChen <2384439266@qq.com>",
+	"icon": "resources/json-128.png",
+	"categories": [
+		"Extension Packs",
+		"Other"
+	],
 	"keywords": [
 		"zain",
 		"ZainChen",
@@ -64,57 +66,22 @@
 		"tree",
 		"compare"
 	],
-	"categories": [
-		"Other"
-	],
 	"engines": {
-		"vscode": "^1.31.0"
+		"vscode": "^1.46.0"
 	},
+	"enableProposedApi": true,
+	"main": "./out/extension.js",
 	"activationEvents": [
 		"onView:jsonOutline",
 		"onLanguage:json"
 	],
-	"main": "./src/index.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "jsonOutline.refresh",
-				"title": "Refresh",
-				"icon": {
-					"light": "./assets/light/refresh.svg",
-					"dark": "./assets/dark/refresh.svg"
-				}
-			},
-			{
-				"command": "jsonOutline.refreshNode",
-				"title": "Refresh",
-				"icon": {
-					"light": "./assets/light/refresh.svg",
-					"dark": "./assets/dark/refresh.svg"
-				}
-			},
-			{
-				"command": "jsonOutline.renameNode",
-				"title": "Rename"
-			}
-		],
-		"languages": [
-			{
-				"id": "json",
-				"extensions": [
-					".json"
-				],
-				"aliases": [
-					"Json"
-				]
-			}
-		],
 		"viewsContainers": {
 			"activitybar": [
 				{
 					"id": "json-views",
 					"title": "json",
-					"icon": "./assets/json-z-500.png"
+					"icon": "./resources/json-z-500.png"
 				}
 			]
 		},
@@ -146,35 +113,79 @@
 				}
 			]
 		},
-		"configuration": {
-			"type": "object",
-			"title": "JSON-zain",
-			"properties": {
-				"JSON-zain.author.ZainChen": {
-					"type": "string",
-					"default": "Welcome to vscode-json.",
-					"description": "Json for Visual Studio Code"
-				},
-				"JSON-zain.json.parsing": {
-					"type": "boolean",
-					"default": false,
-					"description": "Whether to update the menu in real time based on the contents of the json file!"
+		"commands": [
+			{
+				"command": "jsonOutline.refresh",
+				"title": "Refresh",
+				"icon": {
+					"light": "./resources/light/refresh.svg",
+					"dark": "./resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "jsonOutline.refreshNode",
+				"title": "Refresh",
+				"icon": {
+					"light": "./resources/light/refresh.svg",
+					"dark": "./resources/dark/refresh.svg"
+				}
+			},
+			{
+				"command": "jsonOutline.renameNode",
+				"title": "Rename"
+			}
+		],
+		"languages": [
+			{
+				"id": "json",
+				"extensions": [
+					".json"
+				],
+				"aliases": [
+					"Json"
+				]
+			}
+		],
+		"configuration": [
+			{
+				"type": "object",
+				"title": "JSON-zain",
+				"properties": {
+					"JSON-zain.author.ZainChen": {
+						"type": "string",
+						"default": "Welcome to vscode-json.",
+						"description": "Json for Visual Studio Code"
+					},
+					"JSON-zain.json.autorefresh": {
+						"type": "boolean",
+						"default": false,
+						"description": "Whether to update the menu in real time based on the contents of the json file!"
+					}
 				}
 			}
-		}
+		]
 	},
 	"scripts": {
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "node ./node_modules/vscode/bin/test"
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"lint": "eslint . --ext .ts,.tsx"
 	},
 	"devDependencies": {
-		"typescript": "^3.3.1",
-		"vscode": "^1.1.28",
-		"eslint": "^5.13.0",
-		"@types/node": "^10.12.21",
-		"@types/mocha": "^2.2.42"
+		"@types/mkdirp": "^0.5.2",
+		"@types/node": "^12.12.0",
+		"@types/rimraf": "^2.0.2",
+		"@types/vscode": "^1.45.0",
+		"typescript": "^3.9.4",
+		"@typescript-eslint/eslint-plugin": "^3.0.2",
+		"@typescript-eslint/parser": "^3.0.2",
+		"eslint": "^7.1.0"
 	},
 	"dependencies": {
-		"jsonc-parser": "^0.4.2"
+		"jsonc-parser": "^0.4.2",
+		"ftp": "^0.3.10",
+		"mkdirp": "^0.5.1",
+		"rimraf": "^2.6.2",
+		"minimist": "^0.2.1"
 	}
 }
