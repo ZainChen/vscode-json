@@ -1,5 +1,17 @@
 # Json for Visual Studio Code
 
+## Version 2.0.2 November 08, 2020
+
+### New Features
+
+- /
+
+### Bug Fixes
+
+- Fix repository url and readme.
+
+---
+
 ## Version 2.0.1 September 05, 2020
 
 ### New Features
@@ -8,7 +20,7 @@
 
 ### Bug Fixes
 
-- Fix node.children is not iterable
+- Fix node.children is not iterable.
 
 ---
 

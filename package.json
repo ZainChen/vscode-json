@@ -2,7 +2,7 @@
 	"name": "json",
 	"displayName": "json",
 	"description": "Json for Visual Studio Code",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"publisher": "ZainChen",
 	"homepage": "https://github.com/ZainChen/vscode-json#readme",
 	"bugs": {
@@ -10,7 +10,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ZainChen/vscode-json.git"
+		"url": "https://github.com/ZainChen/vscode-json"
 	},
 	"license": "MIT",
 	"author": "ZainChen <2384439266@qq.com>",
