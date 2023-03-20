@@ -1,7 +1,7 @@
 # Json for Visual Studio Code
-[![VisualStudioMarketplace](https://img.shields.io/badge/VisualStudioMarketplace-v2.0.2-orange.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.json)
-[![Downloads](https://img.shields.io/badge/Downloads-305k%2B-brightgreen.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.json)
-[![UpdateTime](https://img.shields.io/badge/UpdateTime-2020%2F11%2F08%2013%3A04%3A30-blue.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.json)
+[![VisualStudioMarketplace](https://img.shields.io/badge/VisualStudioMarketplace-v2.0.1-orange.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.json)
+[![Downloads](https://img.shields.io/badge/Downloads-257k%2B-brightgreen.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.json)
+[![UpdateTime](https://img.shields.io/badge/UpdateTime-2020%2F09%2F05%2000%3A15%3A30-blue.svg)](https://marketplace.visualstudio.com/items?itemName=ZainChen.json)
 
 This extension adds json support for Visual Studio Code.
 
@@ -9,7 +9,7 @@ This extension adds json support for Visual Studio Code.
 
 GitHub: https://github.com/ZainChen/vscode-json
 
-<p align="right">vscode-json <strong>v2.0.2</strong></p>
+<p align="right">vscode-json <strong>v2.0.1</strong></p>
 <p align="center"><img src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/json-z.png" alt="omi" width="300"/></p>
 <h2 align="center">vscode-json</h2>
 
