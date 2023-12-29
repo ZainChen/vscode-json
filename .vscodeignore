@@ -7,4 +7,3 @@ src/**
 .gitignore
 tsconfig.json
 assets
-*.zip

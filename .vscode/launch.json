@@ -8,12 +8,13 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "--extensionDevelopmentPath=${workspaceRoot}"
+                "--extensionDevelopmentPath=${workspaceRoot}",
+                "--enable-proposed-api",
+                "vscode-samples.custom-view-samples"
             ],
-            "stopOnEntry": false,
             "sourceMaps": true,
             "outFiles": [
-                "${workspaceRoot}/out/src/**/*.js"
+                "${workspaceRoot}/out/**/*.js"
             ],
             "preLaunchTask": "npm: watch"
         },
@@ -21,11 +22,10 @@
             "type": "node",
             "request": "attach",
             "name": "Attach to Extension Host",
-            "protocol": "inspector",
             "port": 5870,
             "restart": true,
             "outFiles": [
-                "${workspaceRoot}/out/src"
+                "${workspaceRoot}/out"
             ]
         }
     ]

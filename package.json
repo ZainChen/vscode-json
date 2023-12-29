@@ -67,9 +67,8 @@
 		"compare"
 	],
 	"engines": {
-		"vscode": "^1.46.0"
+		"vscode": "^1.74.0"
 	},
-	"enableProposedApi": true,
 	"main": "./out/extension.js",
 	"activationEvents": [
 		"onView:jsonOutline",
@@ -169,15 +168,15 @@
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"watch": "tsc -watch -p ./",
-		"lint": "eslint . --ext .ts,.tsx"
+		"lint": "eslint \"src/**/*.ts\""
 	},
 	"devDependencies": {
-		"@types/node": "^12.12.0",
-		"@types/vscode": "^1.45.0",
-		"typescript": "^3.9.4",
-		"@typescript-eslint/eslint-plugin": "^3.0.2",
-		"@typescript-eslint/parser": "^3.0.2",
-		"eslint": "^7.1.0"
+		"@types/node": "^16.18.34",
+		"@types/vscode": "^1.73.0",
+		"typescript": "^5.3.2",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
+		"eslint": "^8.26.0"
 	},
 	"dependencies": {
 		"jsonc-parser": "^0.4.2"
