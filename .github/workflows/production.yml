@@ -21,7 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
 
@@ -31,12 +31,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Package
+        run: npm run package
+
       - name: Get version from package.json
         id: package
         run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
   
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           tag_name: vscode-json-v${{ steps.package.outputs.version }}
           files: json-${{ steps.package.outputs.version }}.vsix
