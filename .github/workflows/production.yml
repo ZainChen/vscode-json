@@ -1,0 +1,46 @@
+name: Deploy to GitHub - Prod Stage
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [macos-latest]
+
+    steps:
+      - name: Checkout git repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Get version from package.json
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+
+      - name: Generate package release file tag name
+        id: tag
+        run: echo "release_name=json-${{ steps.package-version.outputs.current-version }}.vsix" >> $GITHUB_OUTPUT
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_name }}
+          files: ${{ steps.tag.outputs.release_name }}.zip

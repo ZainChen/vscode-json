@@ -2,8 +2,9 @@
 	"name": "json",
 	"displayName": "json",
 	"description": "Json for Visual Studio Code",
-	"version": "2.0.2",
+	"version": "2.1.0",
 	"publisher": "ZainChen",
+	"author": "ZainChen <zainchenczy@gmail.com>",
 	"homepage": "https://github.com/ZainChen/vscode-json#readme",
 	"bugs": {
 		"url": "https://github.com/ZainChen/vscode-json/issues"
@@ -13,8 +14,26 @@
 		"url": "https://github.com/ZainChen/vscode-json"
 	},
 	"license": "MIT",
-	"author": "ZainChen <2384439266@qq.com>",
 	"icon": "resources/json-128.png",
+	"main": "./out/extension.js",
+	"scripts": {
+		"watch": "tsc -watch -p ./",
+		"build": "tsc -p ./",
+		"package": "vsce package",
+		"lint": "eslint \"src/**/*.ts\""
+	},
+	"dependencies": {
+		"jsonc-parser": "^0.4.2"
+	},
+	"devDependencies": {
+		"@types/node": "^16.18.34",
+		"@types/vscode": "^1.73.0",
+		"@typescript-eslint/eslint-plugin": "^6.7.0",
+		"@typescript-eslint/parser": "^6.7.0",
+		"@vscode/vsce": "^2.26.0",
+		"eslint": "^8.26.0",
+		"typescript": "^5.3.2"
+	},
 	"categories": [
 		"Extension Packs",
 		"Other"
@@ -69,10 +88,9 @@
 	"engines": {
 		"vscode": "^1.74.0"
 	},
-	"main": "./out/extension.js",
 	"activationEvents": [
-		"onView:jsonOutline",
-		"onLanguage:json"
+		"onLanguage:json",
+		"onLanguage:jsonc"
 	],
 	"contributes": {
 		"viewsContainers": {
@@ -163,22 +181,5 @@
 				}
 			}
 		]
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"lint": "eslint \"src/**/*.ts\""
-	},
-	"devDependencies": {
-		"@types/node": "^16.18.34",
-		"@types/vscode": "^1.73.0",
-		"typescript": "^5.3.2",
-		"@typescript-eslint/eslint-plugin": "^6.7.0",
-		"@typescript-eslint/parser": "^6.7.0",
-		"eslint": "^8.26.0"
-	},
-	"dependencies": {
-		"jsonc-parser": "^0.4.2"
 	}
 }

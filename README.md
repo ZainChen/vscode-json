@@ -52,7 +52,7 @@ VS Code Team
     <tbody>
         <tr>
             <td>
-                <a target="_blank" href="https://zainzy.com">
+                <a target="_blank" href="https://zainchen.github.io">
                     <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
                 </a>
             </td>
@@ -62,24 +62,24 @@ VS Code Team
                 </a>
             </td>
             <td>
-                <a target="_blank" href="https://zainzy.com">
+                <a target="_blank" href="https://zainchen.github.io">
                     <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
                 </a>
             </td>
         </tr>
         <tr>
             <td>
-                <a target="_blank" href="https://zainzy.com">
+                <a target="_blank" href="https://zainchen.github.io">
                     <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
                 </a>
             </td>
             <td>
-                <a target="_blank" href="https://zainzy.com">
+                <a target="_blank" href="https://zainchen.github.io">
                     <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
                 </a>
             </td>
             <td>
-                <a target="_blank" href="https://zainzy.com">
+                <a target="_blank" href="https://zainchen.github.io">
                     <img width="60px" src="https://raw.githubusercontent.com/ZainChen/vscode-json/master/assets/zain.png">
                 </a>
             </td>
