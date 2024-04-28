@@ -32,15 +32,11 @@ jobs:
         run: npm run build
 
       - name: Get version from package.json
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@v1.3.1
-
-      - name: Generate package release file tag name
-        id: tag
-        run: echo "release_name=json-${{ steps.package-version.outputs.current-version }}.vsix" >> $GITHUB_OUTPUT
-
+        id: package
+        run: echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+  
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ steps.tag.outputs.release_name }}
-          files: ${{ steps.tag.outputs.release_name }}.zip
+          tag_name: vscode-json v${{ steps.package.outputs.version }}
+          files: ${{ steps.package.outputs.version }}.vsix
