@@ -38,5 +38,5 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: vscode-json v${{ steps.package.outputs.version }}
-          files: ${{ steps.package.outputs.version }}.vsix
+          tag_name: vscode-json-v${{ steps.package.outputs.version }}
+          files: json-${{ steps.package.outputs.version }}.vsix
