@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import * as json from 'jsonc-parser';
 import * as path from 'path';
 
-export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
+export class JsonTreeProvider implements vscode.TreeDataProvider<number> {
 
 	private _onDidChangeTreeData: vscode.EventEmitter<number | undefined> = new vscode.EventEmitter<number | undefined>();
 	readonly onDidChangeTreeData: vscode.Event<number | undefined> = this._onDidChangeTreeData.event;
@@ -61,13 +61,13 @@ export class JsonOutlineProvider implements vscode.TreeDataProvider<number> {
 		if (vscode.window.activeTextEditor) {
 			if (vscode.window.activeTextEditor.document.uri.scheme === 'file') {
 				const enabled = vscode.window.activeTextEditor.document.languageId === 'json' || vscode.window.activeTextEditor.document.languageId === 'jsonc';
-				vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', enabled);
+				vscode.commands.executeCommand('setContext', 'jsonTreeEnabled', enabled);
 				// if (enabled) {
 				// 	this.refresh();
 				// }
 			}
 		} else {
-			vscode.commands.executeCommand('setContext', 'jsonOutlineEnabled', false);
+			vscode.commands.executeCommand('setContext', 'jsonTreeEnabled', false);
 		}
 		// 切换文件，刷新
 		this.refresh();

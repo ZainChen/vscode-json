@@ -105,7 +105,7 @@
 		"views": {
 			"json-views": [
 				{
-					"id": "jsonOutline",
+					"id": "jsonTree",
 					"name": "Please open the json file.(ZainChen)"
 				}
 			]
@@ -113,26 +113,26 @@
 		"menus": {
 			"view/title": [
 				{
-					"command": "jsonOutline.refresh",
-					"when": "view == jsonOutline",
+					"command": "jsonTree.refresh",
+					"when": "view == jsonTree",
 					"group": "navigation"
 				}
 			],
 			"view/item/context": [
 				{
-					"command": "jsonOutline.renameNode",
-					"when": "view == jsonOutline"
+					"command": "jsonTree.renameNode",
+					"when": "view == jsonTree"
 				},
 				{
-					"command": "jsonOutline.refreshNode",
-					"when": "view == jsonOutline",
+					"command": "jsonTree.refreshNode",
+					"when": "view == jsonTree",
 					"group": "inline"
 				}
 			]
 		},
 		"commands": [
 			{
-				"command": "jsonOutline.refresh",
+				"command": "jsonTree.refresh",
 				"title": "Refresh",
 				"icon": {
 					"light": "./resources/light/refresh.svg",
@@ -140,7 +140,7 @@
 				}
 			},
 			{
-				"command": "jsonOutline.refreshNode",
+				"command": "jsonTree.refreshNode",
 				"title": "Refresh",
 				"icon": {
 					"light": "./resources/light/refresh.svg",
@@ -148,7 +148,7 @@
 				}
 			},
 			{
-				"command": "jsonOutline.renameNode",
+				"command": "jsonTree.renameNode",
 				"title": "Rename"
 			}
 		],
